@@ -1,11 +1,8 @@
 "use client";
 
-import styled from "styled-components";
+import { Header } from "@/components";
+import { PROFILE_TITLE } from "@/constants";
 
-const Container = styled.div`
-  padding: 20px;
-`;
-
-const Profile = () => <Container></Container>;
+const Profile = () => <Header title={PROFILE_TITLE} />;
 
 export default Profile;
