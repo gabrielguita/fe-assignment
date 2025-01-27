@@ -4,6 +4,6 @@ export type {
   Header,
   Error,
   Loading,
-  NoData,
-  Search,
+  Book,
+  BooksParams,
 } from "@/types/types";
