@@ -1,19 +1,16 @@
+import { Button as ButtonTypes } from "@/types";
 import { StyledButton } from "./Button.styles";
 import { LOADING } from "./constants";
 
 export const Button = ({
+  type = "submit",
   disabled,
   label,
   loading,
   onClick,
-}: {
-  disabled: boolean;
-  label: string;
-  loading: boolean;
-  onClick: () => void;
-}) => (
+}: ButtonTypes) => (
   <>
-    <StyledButton disabled={disabled} onClick={onClick}>
+    <StyledButton type={type} disabled={disabled} onClick={onClick}>
       {label}
     </StyledButton>
     {loading && <div>{LOADING}</div>}

@@ -53,6 +53,7 @@ export const BooksList = ({
             <Text>In stock: {stock}</Text>
 
             <Button
+              type="button"
               disabled={loading}
               onClick={handleSave}
               label={BUTTON_LABEL}

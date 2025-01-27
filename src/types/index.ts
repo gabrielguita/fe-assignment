@@ -6,4 +6,6 @@ export type {
   Loading,
   Book,
   BooksParams,
+  Button,
+  Input,
 } from "@/types/types";
