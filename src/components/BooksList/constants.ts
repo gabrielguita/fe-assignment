@@ -1,1 +1,2 @@
-export const END_OF_THE_LIST_MSG = "You have reached the end of the list";
+export const LOADING = "loading..";
+export const BUTTON_LABEL = "Add to cart";
