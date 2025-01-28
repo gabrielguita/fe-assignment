@@ -30,7 +30,15 @@ Components:
 
 First, clone the project from git@github.com:gabrielguita/fe-assignment.git using: git clone git@github.com:gabrielguita/fe-assignment.git
 
-Then, run the development server:
+Then go to /fe-assignment
+  
+Then install the dependencies using:
+```bash
+yarn / yarn install
+# or
+npm install
+```
+Then run the development server:
 
 ```bash
 npm run dev
