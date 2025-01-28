@@ -28,13 +28,13 @@ Components:
 
 ## Getting Started
 
-First, clone the project from git@github.com:gabrielguita/fe-assignment.git using: 
+First, open terminal and clone the project from git@github.com:gabrielguita/fe-assignment.git using: 
 
 ```bash
 git clone git@github.com:gabrielguita/fe-assignment.git
 ```
 
-Then go to /fe-assignment
+Then go to /fe-assignment folder 
   
 Then install the dependencies using:
 ```bash
