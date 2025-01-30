@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Container, Card, Title, Text } from "./BookssList.styles";
-import { Loading, SearchBar, Button } from "@/components";
+import { Loading, SearchBar, Button, AddToCart } from "@/components";
 
 import { Book } from "@/types";
 import { LOADING, BUTTON_LABEL } from "./constants";
@@ -15,8 +15,10 @@ export const BooksList = ({
   isLoading: boolean;
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [addedBook, setAddedBook] = useState<Book[]>([]);
   const [loading, setLoading] = useState(false);
   const [filteredData, setFilteredData] = useState<Book[]>([]);
+
   const handleSearch = (query: string) => {
     setSearchQuery(query);
   };
@@ -34,16 +36,21 @@ export const BooksList = ({
     }
   }, [books, searchQuery]);
 
-  const handleSave = () => {
+  const handleSave = (book: Book) => {
     setLoading(true);
-
+    if (book) {
+      console.log("inside book", book);
+      setAddedBook([...addedBook, book]);
+    }
     setTimeout(() => {
       setLoading(false);
     }, 1000);
   };
+
   return (
     <>
       <SearchBar onSearch={handleSearch} />
+      <AddToCart addedBooks={addedBook} />
       <Container>
         {filteredData.map(({ id, title, author, price, stock }: Book) => (
           <Card key={id}>
@@ -55,7 +62,7 @@ export const BooksList = ({
             <Button
               type="button"
               disabled={loading}
-              onClick={handleSave}
+              onClick={() => handleSave({ id, title, author, price, stock })}
               label={BUTTON_LABEL}
               loading={loading}
             />

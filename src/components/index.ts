@@ -1,6 +1,7 @@
 export { Header } from "./Header";
 export { Nav } from "./Nav";
 export { BooksList } from "./BooksList";
+export { AddToCart } from "./AddToCart";
 export { SearchBar } from "./SearchBar";
 export { UserProfile } from "./UserProfile";
 export { Loading } from "./ui/Loading";
